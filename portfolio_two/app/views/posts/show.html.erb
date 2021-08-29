@@ -1,0 +1,17 @@
+<div class="cmn">
+    <p>Find me in app/views/posts/show.html.erb</p>
+    <h2 class="cmn-title"><%= @post.title %></h2>
+    <div>
+        投稿者: <%= @post.user.username %>
+    </div>
+    <div>
+        内容: <%= @post.content %>
+    </div>
+    <div class="current_user">
+        <% if @post.user == current_user %>
+            <%= link_to '●投稿の編集', edit_post_path(@post.id) %>
+            <br>
+            <%= button_to "削除する", post_path(@post), method: :delete, data: {confirm: "本当に削除しますか？"} %>
+        <% end %>
+    </div>
+</div>
