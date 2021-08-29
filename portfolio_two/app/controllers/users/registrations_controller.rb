@@ -10,7 +10,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     super
     @user = User.new
-    @user.image = default.jpeg
+    @user.image = 'default.jpeg'
   end
 
   def edit

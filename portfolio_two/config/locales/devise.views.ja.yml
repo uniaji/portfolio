@@ -7,6 +7,8 @@ ja:
         email: "メールアドレス"
         password: "パスワード"
         password_confirmation: "確認用パスワード"
+        image: "アイコン写真"
+        profile: "プロフィール"
         remember_me: "ログインを記憶"
     models:
       user: "ユーザ"
